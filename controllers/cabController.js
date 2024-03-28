@@ -27,11 +27,11 @@ const addCab = async (req, res) => {
 // Update Cab
 const updateCab = async (req, res) => {
 	try {
-		const { selectedCarId, pricePerMinute } = req.body;
+		const { selectedCarId } = req.body;
 
 		const cab = await Cab.findByIdAndUpdate(
 			selectedCarId,
-			{ pricePerMinute: pricePerMinute },
+			{ ...req.body },
 			{ new: true }
 		);
 

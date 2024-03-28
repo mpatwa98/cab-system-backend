@@ -6,6 +6,8 @@ const cabSchema = new mongoose.Schema(
 		description: { type: String },
 		image: { type: String },
 		seats: { type: Number },
+		bookingTime: { type: Date },
+		exitTime: { type: Date },
 		pricePerMinute: { type: Number, required: true },
 	},
 	{ collection: "cabs" }
