@@ -23,7 +23,7 @@ app.use("/api/v1/bookings", bookingsRouter);
 app.use("/api/v1/cabs", cabsRouter);
 app.post("/api/v1/send-email", async (req, res) => {
 	try {
-		const emailData = req.body; // Assuming req.body contains necessary email data
+		const emailData = req.body;
 		if (!emailData || !emailData.email) {
 			res.status(204).send("Invalid Email");
 			return;
